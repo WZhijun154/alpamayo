@@ -63,7 +63,7 @@ class ExpertLogitsProcessor(LogitsProcessor):
             scores: The scores.
 
         Returns:
-            The scores.
+            torch.FloatTensor: The modified scores tensor with trajectory tokens masked out (set to -inf).
         """
         # Create a mask filled with zeros
         mask = torch.zeros_like(scores)
