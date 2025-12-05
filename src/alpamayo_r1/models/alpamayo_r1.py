@@ -65,14 +65,8 @@ class ExpertLogitsProcessor(LogitsProcessor):
         Returns:
             torch.FloatTensor: The modified scores tensor with trajectory tokens masked out (set to -inf).
         """
-        # Create a mask filled with zeros
-        mask = torch.zeros_like(scores)
-        mask[:, self.traj_token_offset : self.traj_token_offset + self.traj_vocab_size] = float(
-            "-inf"
-        )
-
-        # Apply the mask to the scores
-        scores = scores + mask
+        # Directly assign -inf to the trajectory token positions in the scores tensor
+        scores[:, self.traj_token_offset : self.traj_token_offset + self.traj_vocab_size] = float('-inf')
         return scores
 
 
