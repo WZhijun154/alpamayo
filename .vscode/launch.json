@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: test_inference.py",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/alpamayo_r1/test_inference.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/src"
+            },
+            "args": [],
+            "justMyCode": true,
+            "stopOnEntry": false
+        }
+    ]
+}
