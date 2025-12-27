@@ -201,7 +201,7 @@ graph LR
         D --> G[fuse_traj_tokens]
         E --> G
         F --> G
-        G --> H[Unified Token Sequence<br/>[text|image|trajectory]]
+        G --> H["Unified Token Sequence<br/>text|image|trajectory"]
     end
 
     style A fill:#ffebee
