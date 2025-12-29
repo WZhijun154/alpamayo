@@ -3,6 +3,7 @@ name = "alpamayo_r1"
 version = "0.1.0"
 requires-python = "==3.12.*"
 dependencies = [
+  "torch==2.8.0",
   "accelerate>=1.12.0",
   "av>=16.0.1",
   "einops>=0.8.1",
@@ -11,14 +12,13 @@ dependencies = [
   "pandas>=2.3.3",
   "physical_ai_av>=0.1.0",
   "pillow>=12.0.0",
-  "torch==2.8.0",
   "torchvision>=0.23.0",
   "transformers==4.57.1",
-  "flash-attn>=2.8.3",
+  "flash-attn==2.8.3",
 ]
 
 [build-system]
-requires = ["uv_build>=0.9.7,<0.10.0", "setuptools", "wheel", "torch==2.8.0"]
+requires = ["uv_build>=0.9.7,<0.10.0"]
 build-backend = "uv_build"
 
 [dependency-groups]
@@ -30,6 +30,7 @@ dev = [
 ]
 
 [tool.uv]
+no-build-isolation-package = ["flash-attn"]
 
 [tool.ruff]
 line-length = 100
