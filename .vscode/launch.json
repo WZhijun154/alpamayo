@@ -15,6 +15,21 @@
             "args": [],
             "justMyCode": true,
             "stopOnEntry": false
+        },
+        {
+            "name": "Python: fisheye_fov120_projection.py",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/fisheye_fov120_projection.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/src"
+            },
+            "args": [],
+            "justMyCode": true,
+            "stopOnEntry": false
         }
     ]
 }
